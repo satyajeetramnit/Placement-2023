@@ -1,3 +1,5 @@
+// Minimum number of Characteres to be removed to sort the string
+
 #include<iostream>
 #include<algorithm>
 #include<string>

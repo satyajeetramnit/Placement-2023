@@ -1,3 +1,5 @@
+// Return the maximum value of the sum of the pair of elements whose sum of digits are equal
+
 #include<iostream>
 #include<algorithm>
 #include<string>

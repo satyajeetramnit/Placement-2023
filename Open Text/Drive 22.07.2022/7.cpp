@@ -1,3 +1,5 @@
+// Check for the largest character in a string present in both upper and lower case
+
 #include<iostream>
 #include<algorithm>
 #include<string>
