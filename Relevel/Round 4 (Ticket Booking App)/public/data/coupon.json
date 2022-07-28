@@ -1,0 +1,23 @@
+{
+  "coupons": [
+    {
+      "id": "1",
+      "code": "SAVE-10",
+      "disount": "10",
+      "minimum_value": "20000"
+    },
+    {
+      "id": "2",
+      "code": "SALE",
+      "disount": "20",
+      "minimum_value": "10000"
+    },
+    {
+      "id": "3",
+      "code": "SUMMER",
+      "disount": "15",
+      "minimum_value": "30000"
+    }
+  ],
+  "total": 3
+}
