@@ -16,6 +16,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// IN CPP
 bool solution(vector<int> &A){
     unordered_map<int, int> m;
     for(int i=0; i<A.size(); i++){
@@ -28,6 +29,31 @@ bool solution(vector<int> &A){
     }
     return true;
 }
+
+// IN JAVA
+public boolean solution(int[] A) {
+    HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
+    for(int i=0; i<A.length; i++){
+        m.put(A[i], m.getOrDefault(A[i], 0)+1);
+    }
+    for(Map.Entry<Integer, Integer> it: m.entrySet()){
+        if(it.getValue()!=2){
+            return false;
+        }
+    }
+    return true;
+}
+
+// IN PYTHON
+def solution(A):
+    m = {}
+    for i in A:
+        m[i] = m.get(i, 0) + 1
+    for i in m:
+        if m[i] != 2:
+            return False
+    return True
+
 
 int main(){
     vector<int> A = {1,2,2,1};

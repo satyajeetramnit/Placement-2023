@@ -15,6 +15,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// IN CPP
 int solution(vector<int> &A, vector<int> &B){
     int sum1=0, sum2=0;
     for(int i=0; i<A.size(); i++){
@@ -52,6 +53,72 @@ int solution(vector<int> &A, vector<int> &B){
     }
     return -1;
 }
+
+// IN JAVA
+public int solution(int[] A, int[] B) {
+    int sum1=0, sum2=0;
+    for(int i=0; i<A.length; i++){
+        sum1+=A[i];
+    }
+    for(int i=0; i<B.length; i++){
+        sum2+=B[i];
+    }
+    if(sum1>sum2){
+        return solution(B,A);
+    }
+    int[] dif = new int[A.length+B.length];
+    int c=0;
+    int d=sum2-sum1;
+    
+    if(d==0){
+        return 0;
+    }
+    
+    for(int i=0; i<A.length; i++) {
+        dif[i]=6-A[i];
+    }
+    for(int i=0; i<B.length; i++){
+        dif[i+A.length]=B[i]-1;
+    }
+        
+    Arrays.sort(dif, Collections.reverseOrder());
+        
+    for(int i=0; i<dif.length; i++){
+        d-=dif[i];
+        c++;
+        if(d<=0){
+            return c;
+        }
+    }
+    return -1;
+}
+
+// IN PYTHON
+def solution(A, B):
+    sum1=0
+    sum2=0
+    for i in A:
+        sum1+=i
+    for i in B:
+        sum2+=i
+    if sum1>sum2:
+        return solution(B,A)
+    dif=[]
+    c=0
+    d=sum2-sum1
+    if d==0:
+        return 0
+    for i in A:
+        dif.append(6-i)
+    for i in B:
+        dif.append(i-1)
+    dif.sort(reverse=True)
+    for i in dif:
+        d-=i
+        c+=1
+        if d<=0:
+            return c
+    return -1
 
 int main(){
     vector<int> A = {5};

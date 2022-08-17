@@ -22,6 +22,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// IN CPP
 int solution(vector<int> &A, vector<int> &B){
     for(int i=1; i<A.size(); i++){
         A[i]+=A[i-1];
@@ -38,6 +39,37 @@ int solution(vector<int> &A, vector<int> &B){
         rB=B[B.size()-1]-B[k-1];
         
         fair+=int(lA==rA && rA==lB && lB==rB);
+    }
+    return fair;
+}
+
+// IN PYTHON
+def solution(A, B):
+    for i in range(1, len(A)):
+        A[i] += A[i-1]
+        B[i] += B[i-1]
+    fair = 0
+    for k in range(1, len(A)):
+        lA = A[k-1]
+        rA = A[-1] - A[k-1]
+        lB = B[k-1]
+        rB = B[-1] - B[k-1]
+        fair += int(lA == rA and rA == lB and lB == rB)
+    return fair
+
+// IN JAVA
+public int solution(int[] A, int[] B) {
+    for (int i = 1; i < A.length; i++) {
+        A[i] += A[i-1];
+        B[i] += B[i-1];
+    }
+    int fair = 0;
+    for (int k = 1; k < A.length; k++) {
+        int lA = A[k-1];
+        int rA = A[A.length-1] - A[k-1];
+        int lB = B[k-1];
+        int rB = B[B.length-1] - B[k-1];
+        fair += int(lA == rA && rA == lB && lB == rB);
     }
     return fair;
 }
