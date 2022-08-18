@@ -28,7 +28,6 @@ int solution(vector<int> &A, vector<int> &B){
         A[i]+=A[i-1];
         B[i]+=B[i-1];
     }
-    
     int fair=0;
     int lA, rA, lB, rB;
     for(int k=1; k<A.size(); k++){
@@ -42,6 +41,15 @@ int solution(vector<int> &A, vector<int> &B){
     }
     return fair;
 }
+
+// Explain Approach
+// 1. We can use two pointers to find the fair index.
+// 2. At first, we will find the fair index in the left part of the array.
+// 3. Then, we will find the fair index in the right part of the array.
+// 4. If the sum of the left part and the right part is equal, then the index is fair.
+// 5. then we will increment the fair index.
+// 6. We will return the fair index.
+
 
 // IN PYTHON
 def solution(A, B):

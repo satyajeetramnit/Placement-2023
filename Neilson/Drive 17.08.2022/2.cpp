@@ -54,6 +54,13 @@ int solution(vector<int> &A, vector<int> &B){
     return -1;
 }
 
+// Explain approach
+// 1. Create a vector dif with all the possible values of the dice that can be subtracted from the sum of the dice in A.
+// 2. Sort the vector in descending order.
+// 3. Iterate over the vector and subtract the values from the difference.
+// 4. If the difference becomes zero or less, return the count.
+// 5. Else return -1.
+
 // IN JAVA
 public int solution(int[] A, int[] B) {
     int sum1=0, sum2=0;

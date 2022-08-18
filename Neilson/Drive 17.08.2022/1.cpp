@@ -30,6 +30,12 @@ bool solution(vector<int> &A){
     return true;
 }
 
+// Explain approach
+// 1. Create a hashmap with key as element and value as count of that element.
+// 2. Check if all the elements in the hashmap have count 2.
+// 3. If yes, return true.
+// 4. Else return false.
+
 // IN JAVA
 public boolean solution(int[] A) {
     HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
