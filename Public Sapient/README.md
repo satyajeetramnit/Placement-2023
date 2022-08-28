@@ -14,6 +14,7 @@
 
 >## Solution :: with all Test Case Pass
 <img src="https://imgur.com/ByDbGTS.png" />
+<img src="https://imgur.com/XBYFGyw.png" />
 
 <br/>
 
